@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <meta name="theme-color" content="#EEEEEE" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <link rel="apple-touch-icon" href="/icons/maskable_icon_x192.png">
+
+  <title>Kinderanästhesie-Rechner</title>
+  <meta name="description" content="Berechnung von Medikamentendosierungen für eine Anaesthesie bei Kindern">
+
+  <!--<base href="/qWMKcb8JEzsu9bmFPB2RGetK/">-->
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="kinderandosierungen-app.css">
+
+</head>
+
+<body>
+  <dialog id="zweck-dialog"></dialog>
+  <dialog id="impressum-dialog"></dialog>
+  <header>
+    <div class="toolbar-left">
+      <div>Kinderanästhesie-Rechner
+      </div>
+      <div class="toolbar-right">
+        <span class="info">&#9432;</span>
+      </div>
+    </div>
+  </header>
+  <div class="page">
+    <div>
+      <label>Alter (Jahre) auswählen:
+      </label>
+      <input id="age-slider" type=range min="1" max="10" value="6" step="1">
+      <input id="age-number" type="number" value="6">
+    </div>
+    <div>
+      <label>Gewicht (kg KG) anpassen:
+      </label>
+      <input id="weight-slider" type=range min="1" max="40" value="20" step="1">
+      <input id="weight-number" type="number" value="20">
+    </div>
+    <div id="drugs"></div>
+  </div>
+  </div>
+</body>
+<footer>
+  <p>Diese App ist kein Medizinprodukt und darf nicht für die Therapie, sondern ausschließlich für die ärztliche
+    Ausbildung verwendet werden. Der Autor übernimmt keine Verantwortung und keine daraus folgende oder sonstige
+    Haftung, die auf irgendeine Art aus der Benutzung der enthaltenen Informationen entsteht.
+</footer>
+
+<!--Content Security Policy and Service Worker: Separate file--> 
+<script src="loadWorker.js"></script>
+<script src="kinderandosierungen-app.js"></script>
+
+</html>

@@ -1,0 +1,82 @@
+      :root {
+      	font-family: 'Arial', sans-serif;
+      }
+
+      body {
+      	margin: 0;
+      	line-height: 1.5;
+      	min-height: 100vh;
+      	background-color: #eeeeee;
+      }
+
+      header {
+      	background-color: #4285f4;
+      	color: white;
+      	height: 64px;
+      	padding: 0px 10px;
+      	font-size: 24px;
+      }
+
+      .info {
+      	cursor: pointer;
+      }
+
+      .toolbar-left {
+      	display: flex;
+      	line-height: 64px;
+      }
+
+      .toolbar-right {
+      	margin-left: auto;
+      }
+
+      dialog {
+      	width: 70%;
+      	font-size: 0.8em;
+      	border-style: none;
+      }
+
+      dialog::backdrop {
+      	background: hsl(0 0% 50% /.5);
+      }
+
+      .page {
+      	margin: 20px 10px 20px;
+      }
+
+      label {
+      	display: block;
+      }
+
+      input[type="range"] {
+      	height: 4px;
+      }
+
+      input[type="number"] {
+      	width: 3em;
+      }
+
+      .group-header {
+      	background-color: white;
+      	padding: 10px;
+      	border-bottom: 1px solid #ddd;
+      	font-weight: bold;
+      	margin-top: 20px;
+      }
+
+      .group-item {
+      	background-color: white;
+      	padding: 10px;
+      }
+
+      .secondary {
+      	color: grey;
+      }
+
+      footer {
+      	background-color: #4285f4;
+      	color: white;
+      	font-size: 0.7em;
+      	padding: 10px;
+      	text-align: center;
+      }
