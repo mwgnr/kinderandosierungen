@@ -2,6 +2,7 @@
   "name": "Kinderanästhesie-Rechner",
   "short_name": "Kinderanästhesie-Rechner",
   "description": "Berechnung von Medikamentendosierungen für eine Anaesthesie bei Kindern",
+  "id": "/qWMKcb8JEzsu9bmFPB2RGetK/",
   "start_url": "/qWMKcb8JEzsu9bmFPB2RGetK/",
   "display": "standalone",
   "theme_color": "#EEEEEE",
@@ -11,12 +12,12 @@
     "src": "icons/maskable_icon_x512.png",
     "sizes": "512x512",
     "type": "image/png",
-    "purpose": "any maskable"
+    "purpose": "maskable"
   },
   {  
     "src": "icons/maskable_icon_x192.png",
     "sizes": "192x192",
     "type": "image/png",
-    "purpose": "any maskable"
+    "purpose": "any"
   }]
 }
