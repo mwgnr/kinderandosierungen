@@ -67,6 +67,11 @@ function calcDose() {
             "phase": "Beatmung",
             "unit": "cm"
         },
+	{
+            "name": "Larynxmaskengröße",
+            "phase": "Beatmung",
+            "unit": "#"
+        },
         {
             "name": "Atemfrequenz",
             "phase": "Beatmung",
@@ -103,6 +108,13 @@ function calcDose() {
             "hDose": 1,
             "lDose": 0.5,
             "name": "Sufentanil",
+            "phase": "Einleitung",
+            "unit": "µg"
+        },
+	{
+            "hDose": 3,
+            "lDose": 1,
+            "name": "Fentanyl",
             "phase": "Einleitung",
             "unit": "µg"
         },
@@ -178,6 +190,13 @@ function calcDose() {
             "phase": "Schmerztherapie",
             "unit": "mg"
         },
+	{
+            "hDose": 0.25,
+            "lDose": 0.5,
+            "name": "Esketamin",
+            "phase": "Schmerztherapie",
+            "unit": "mg"
+        },
         {
             "lDose": 0.15,
             "name": "Dexamethason",
@@ -239,6 +258,12 @@ function calcDose() {
             "phase": "Notfall",
             "stopDose": 5,
             "unit": "mg"
+        },
+	{
+            "lDose": 4,
+            "name": "Defibrillation",
+            "phase": "Notfall",
+            "unit": "Joule"
         },
         {
             "lDose": 5,
@@ -324,7 +349,24 @@ function calcDose() {
             const tubusT = age / 2 + 12;
             drugDose = `<div class="secondary">${tubusT}</div>`;
         }
-        else if (drug.name == "Salbutamol p.i.") {
+        else if (drug.name == "Larynxmaskengröße") {
+            if (weightSlider.value <= 5) {
+                drugDose = `<div class="secondary">1</div>`;
+            }
+            else if (weightSlider.value >= 6 && weightSlider.value <= 10) {
+		drugDose = `<div class="secondary">1.5</div>`;
+            }
+	    else if (weightSlider.value >= 11 && weightSlider.value <= 20) {
+		drugDose = `<div class="secondary">2</div>`;
+            }
+	    else if (weightSlider.value >= 21 && weightSlider.value <= 30) {
+		drugDose = `<div class="secondary">2.5</div>`;
+            }
+	    else if (weightSlider.value >= 31 && weightSlider.value <= 50) {
+		drugDose = `<div class="secondary">3</div>`;
+            }
+        }
+	else if (drug.name == "Salbutamol p.i.") {
             if (age > 5) {
                 drugDose = `<div class="secondary">5</div>`;
             }
